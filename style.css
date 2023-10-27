@@ -1,5 +1,113 @@
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #eefff8;
+}
+
+body,
+.number-inputs input {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  color: #000000;
+}
+
+.container,
+.calculator,
+.calculator .number-inputs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 50px 30px;
+}
+
+.calculator,
+.calculator .number-inputs {
+  flex-direction: column;
+  width: 100%;
+}
+
+.number-field {
+  width: 100%;
+  border-radius: 5px;
+  padding: 16px 16px;
+  background-color: #ffffff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  border: 0;
+}
+
+.number-inputs input:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.arithmetic-operators input {
+  font-size: 2rem;
+}
+
+button {
+  font-size: 0.8rem;
+  height: 37px;
+}
+
+.arithmetic-operators {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.arithmetic-operators input,
+button {
+  background-color: #ffffff;
+  width: 50px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  border: 0;
+  cursor: pointer;
+}
+
+.arithmetic-operators input:hover,
+button:hover {
+  background-color: #7afec9;
+}
+
+.addition,
+.subtraction,
+.multiplication,
+.division {
+  position: relative;
+}
+
+.fa-solid {
+  position: absolute;
+  top: 10px;
+  left: 18px;
+}
+
+.calcular-result {
+  margin-top: 30px;
+  font-size: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 700px;
+    padding: 80px 50px;
+  }
+
+  .calculator .number-inputs {
+    flex-direction: row;
+  }
 }

@@ -1,14 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Module 2.5 - JS DOM Manipulation Assignment</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-    
-<script src="script.js"></script>
-    
-</body>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://kit.fontawesome.com/862d0b7dda.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="calculator">
+        <div class="number-inputs">
+          <input type="number" value="number-field-1" name="number-field-1" id="number-field-1" class="number-field" placeholder="FIRST VALUE" />
+          <input type="number" value="number-field-2" name="number-field-2" id="number-field-2" class="number-field" placeholder="SECOND VALUE" />
+        </div>
+        <div class="arithmetic-operators">
+          <div class="addition">
+          <input type="button" onclick="arithmeticAdd('+') " class="operator" id="addition-operator"/>
+          <i class="fa-solid fa-plus"></i>
+        </div>
+        <div class="subtraction">
+          <input type="button" onclick="arithmeticSubtract('-') " class="operator" id="subtraction-operator"/>
+          <i class="fa-solid fa-minus"></i>
+        </div>
+        <div class="multiplication">
+          <input type="button" onclick="arithmeticMultiply('*') " class="operator" id="multiplication-operator"/>
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="division">
+          <input type="button" onclick="arithmeticDivide('/') " class="operator" id="division-operator"/>
+          <i class="fa-solid fa-divide"></i>
+        </div>
+          <button id="reset-button">Reset</button>
+        </div>
+        <div class="calculator-result">
+            <p id="result"></p>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
